@@ -1,0 +1,28 @@
+# Bí mật
+.env
+.env.*
+!.env.example
+
+# Python
+api/venv/
+__pycache__/
+*.pyc
+api/storage/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Công cụ, hệ điều hành
+.claude/
+.DS_Store
+
+# Tạm thời: web/ còn repo git riêng, sẽ gộp vào repo chung ở giai đoạn P0
+web/
+
+# Bản sao lưu code cũ (chỉ trên máy)
+_backup/
+# DB SQLite dùng khi chạy thử
+api/*.db
