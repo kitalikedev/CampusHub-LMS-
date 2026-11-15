@@ -24,28 +24,9 @@
 | M-3 Demo sơ bộ | khoảng 2026-11-19 | Kịch bản demo (08 §6) bước 1–7 và 9–11 chạy được trên giao diện; **push code** lên repo; có bản nháp đủ bộ sơ đồ to-be |
 | M-4 Final | khoảng 2026-11-22 | Kịch bản demo chạy đầy đủ; sơ đồ khớp code; tài liệu as-built; slide sẵn sàng; còn 1 ngày dự phòng trước hạn |
 
-## 3. PROGRESS (cập nhật khi xong mỗi việc)
+## 3. Tiến độ
 
-Trạng thái: Chưa bắt đầu · Đang làm · Chờ duyệt · Xong · Bị chặn.
-
-| Hạng mục | Phụ trách | Trạng thái | Ghi chú |
-|---|---|---|---|
-| Bộ tài liệu kế hoạch 00–10, AGENTS.md | Lead | Chờ duyệt | Bản 0.1, ngày 2026-11-09 |
-| Repo chung + push tài liệu kế hoạch | Lead | Đang làm | Commit `Initial Commit`, chỉ gồm tài liệu |
-| P0 Chuẩn bị (hạ tầng) | Lead | Chưa bắt đầu | |
-| P1 Chốt thiết kế (M-1) | Lead | Chưa bắt đầu | |
-| Sơ đồ as-is (T-01…T-03) | TV1, TV2, Lead | Chưa bắt đầu | |
-| Backend core (T-10…T-18) | Lead | Chưa bắt đầu | |
-| Sơ đồ to-be (T-04…T-09) | TV1, TV2, Lead | Chưa bắt đầu | Sau M-1 |
-| Frontend (T-21…T-26) | Lead, TV1, TV2 | Chưa bắt đầu | |
-| Should (T-27a…T-27f) | Lead, TV1, TV2 | Chưa bắt đầu | |
-| Hoàn thiện, demo (T-29) | Cả nhóm | Chưa bắt đầu | |
-
-**Sơ đồ cần sửa do code thay đổi:** (ghi mã sơ đồ và lý do mỗi khi một PR đổi hành vi)
-
-| Sơ đồ | Lý do | PR | Đã sửa? |
-|---|---|---|---|
-| — | — | — | — |
+Tiến độ từng việc, tình hình hiện tại và danh sách sơ đồ cần sửa được theo dõi ở một file riêng: **[`docs/PROGRESS.md`](../PROGRESS.md)**. Không ghi bảng tiến độ ở đây để tránh hai nơi lệch nhau.
 
 ## 4. Kế hoạch cắt giảm khi trễ
 

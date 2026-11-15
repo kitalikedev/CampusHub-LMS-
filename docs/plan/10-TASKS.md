@@ -63,6 +63,7 @@
 | T-27d | (S) Import CSV tài khoản | Lead | P4 | T-13 | S |
 | T-27e | (S) Bản dịch tiếng Anh | TV1 | P4 | T-21 | S |
 | T-27f | (S/C) Ghi và xem nhật ký thao tác | TV2 | P4 | T-11 | M |
+| T-27g | (S) Xuất sổ điểm lớp ra CSV (BR-GRD-07) | Lead | P4 | T-18 | S |
 | T-29 | Chạy thử kịch bản demo, quay video dự phòng, làm slide | Cả nhóm | P5 | M-3 | M |
 
 ## 5. Đặc tả chi tiết các việc của TV1, TV2
@@ -97,7 +98,7 @@
 - **Hành vi:** ERD-01 (18 bảng, crow's foot, PK/FK, UQ chính) và REL-01, khớp đúng 05 §2.
 
 **T-09 – Duyệt chéo và as-built** · TV1, TV2 · P5 · M
-- **Phụ thuộc:** T-04…T-08. **Hành vi:** TV1 duyệt BPMN/ERD, TV2 duyệt Use Case/Activity theo checklist 07 §6; sửa các sơ đồ ghi ở 09 §3; xuất toàn bộ PNG vào `docs/diagrams/export/`.
+- **Phụ thuộc:** T-04…T-08. **Hành vi:** TV1 duyệt BPMN/ERD, TV2 duyệt Use Case/Activity theo checklist 07 §6; sửa các sơ đồ ghi ở `docs/PROGRESS.md` §6; xuất toàn bộ PNG vào `docs/diagrams/export/`.
 
 ### Code
 

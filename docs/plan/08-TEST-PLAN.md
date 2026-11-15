@@ -62,6 +62,7 @@ Cột "Mức": M = phải có trước M-3; S = làm cùng tính năng Should.
 | TC-GRD-04 | Bài MANUAL: SV xem trước và sau khi công bố | Trước: không thấy; sau: thấy, có `visible_at` | BR-GRD-04 · AC-GRD-02.1 | M |
 | TC-GRD-05 | Điểm tạm tính theo Ex6 | 8.30, "đã có điểm 50% trọng số", không có điểm chữ | BR-GRD-05 · ISS-05 · AC-GRD-04.1 | M |
 | TC-GRD-06 | Sửa một điểm đã có | Có bản ghi nhật ký điểm cũ → mới | BR-GRD-03, BR-AUD-01 | S |
+| TC-GRD-07 | Xuất sổ điểm CSV: SV và GV lớp khác bị chặn; GV đúng lớp tải được | 403 / 200, có BOM UTF-8, tiêu đề bài bắt đầu bằng `=` được thêm `\'` | BR-GRD-07 | S |
 | TC-LCK-01 | Khóa sổ khi tổng trọng số 90% | `LOCK_PRECONDITION_FAILED` kèm lý do | BR-LCK-01 · AC-LCK-01.1 | M |
 | TC-LCK-02 | Còn bài nộp chưa chấm; còn phúc khảo đang chờ | Cả hai bị chặn kèm lý do | BR-LCK-01, BR-REG-04 | M |
 | TC-LCK-03 | Khóa sổ với dữ liệu Ex1 và Ex2 | 8.61 → A (3.7); thiếu điểm giữa kỳ → 6.06 → C (2.0) | BR-LCK-02, 03 · AC-LCK-01.2 | M |
@@ -96,7 +97,7 @@ Cột "Mức": M = phải có trước M-3; S = làm cùng tính năng Should.
 - [ ] Có test cho các BR/AC mà PR động tới; `pytest` pass.
 - [ ] `npm run lint` 0 lỗi, `npx tsc --noEmit` và `npm run build` pass (nếu PR có sửa `web/`).
 - [ ] Không có chuỗi giao diện gán cứng; có khóa dịch tiếng Việt.
-- [ ] Nếu đổi hành vi: đã cập nhật 03/05/06 và ghi vào 09 §3 sơ đồ nào cần sửa.
+- [ ] Nếu đổi hành vi: đã cập nhật 03/05/06 và ghi vào `docs/PROGRESS.md` §6 sơ đồ nào cần sửa.
 - [ ] Không commit `.env`, `venv/`, `node_modules/`, `storage/`.
 - [ ] Lead đã review và đồng ý.
 
@@ -115,7 +116,7 @@ Cột "Mức": M = phải có trước M-3; S = làm cùng tính năng Should.
 | FR-ENR-01…04, 06 | BR-ENR-01…09 | UC-09…11, UC-26 | ACT-02, BPMN-01, SEQ-02, CLS-02 | TC-ENR-01…10 |
 | FR-ASG-01, 02 | BR-ASG-01…08 | UC-12 | BPMN-02 | TC-ASG-01…04 |
 | FR-SUB-01, 03, 04 | BR-SUB-01, 03…08 | UC-13 | ACT-03, BPMN-02, SEQ-03 | TC-SUB-01…09 |
-| FR-GRD-01…04 | BR-GRD-01…05 | UC-14, UC-15 | ACT-04, BPMN-02, SEQ-04 | TC-GRD-01…05 |
+| FR-GRD-01…04 | BR-GRD-01…05 | UC-14, UC-15 | ACT-04, BPMN-02, SEQ-04 | TC-GRD-01…05, 07 |
 | FR-LCK-01, 02 | BR-LCK-01…07 | UC-18, UC-19 | ACT-06, BPMN-03, SEQ-05 | TC-LCK-01…06 |
 | FR-TRN-01 | BR-TRN-01…07 | UC-20 | BPMN-03, SEQ-06 | TC-TRN-01…06 |
 | FR-TRN-02 | BR-ACD-05, BR-GEN-01 | UC-21 | — | TC-GEN-01, kiểm tra tay |

@@ -19,8 +19,6 @@ out/
 .claude/
 .DS_Store
 
-# Tạm thời: web/ còn repo git riêng, sẽ gộp vào repo chung ở giai đoạn P0
-web/
 
 # Bản sao lưu code cũ (chỉ trên máy)
 _backup/

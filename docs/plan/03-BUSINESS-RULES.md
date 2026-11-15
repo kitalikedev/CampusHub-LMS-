@@ -18,6 +18,7 @@
 | BR-ACC-03 | Mật khẩu ban đầu và mật khẩu reset do hệ thống sinh ngẫu nhiên: 12 ký tự gồm chữ và số, bỏ các ký tự dễ nhầm (0/O, 1/l/I). Mật khẩu chỉ trả về **một lần** trong response tạo/reset/import. Hệ thống chỉ lưu bản băm bcrypt nên không ai xem lại được. | DEC-C1 | Service | — |
 | BR-ACC-04 | Tài khoản mới hoặc vừa reset có cờ "phải đổi mật khẩu". Khi cờ bật, chỉ được đổi mật khẩu, xem thông tin bản thân và đăng xuất; mọi API khác trả lỗi. | DEC-C1 | Service + UI (chuyển trang) | PASSWORD_CHANGE_REQUIRED |
 | BR-ACC-05 | Mật khẩu mới dài 8–72 byte và khác mật khẩu đang dùng. | ĐỀ XUẤT, ISS-07 | Service | PASSWORD_POLICY_VIOLATION |
+| CURRENT_PASSWORD_INCORRECT | 422 | Mật khẩu hiện tại nhập sai khi đổi mật khẩu |
 | BR-ACC-06 | Tài khoản bị khóa không đăng nhập được; token đã cấp bị từ chối ngay ở request kế tiếp. | ĐỀ XUẤT | Service | ACCOUNT_DISABLED |
 | BR-ACC-07 | Admin không tự khóa hay tự hạ quyền chính mình; hệ thống luôn còn ít nhất một Admin đang hoạt động. | ĐỀ XUẤT | Service | LAST_ADMIN_REQUIRED |
 | BR-ACC-08 | Tài khoản SV có mã sinh viên duy nhất; GV và Admin không có mã SV. | ĐỀ XUẤT | DB (unique) + Service | STUDENT_CODE_EXISTS |
@@ -77,6 +78,7 @@
 | BR-GRD-04 | Hiển thị điểm: IMMEDIATE → SV thấy ngay khi điểm được lưu; MANUAL → SV thấy khi GV bấm công bố bài (công bố toàn bộ điểm của bài), sau đó mọi lần sửa đều hiện ngay. Khi lớp khóa sổ, mọi điểm đều hiện. Thời điểm điểm bắt đầu hiện được lưu lại để tính hạn phúc khảo. Chi tiết ở §7.4. | DEC-E6 | Service | — |
 | BR-GRD-05 | Trước khi khóa sổ, điểm môn chỉ là **tạm tính** = Σ(điểm × trọng số) / Σ(trọng số các bài đã có điểm). Phía SV chỉ tính trên các điểm SV thấy được; phía GV tính trên mọi điểm. Luôn hiện kèm "đã có điểm X% trọng số" và **không** quy đổi điểm chữ/GPA. | ĐỀ XUẤT, ISS-05 | Service | — |
 | BR-GRD-06 | Khi một điểm bắt đầu hiện với SV, hệ thống gửi thông báo cho SV đó. | DEC-F1 | Service | — |
+| BR-GRD-07 | GV phụ trách lớp (và Admin) xuất sổ điểm lớp ra CSV UTF-8 có BOM, một dòng mỗi SV: mã SV, họ tên, email, điểm từng bài, điểm tạm tính, trọng số đã chấm, điểm tổng kết, điểm chữ, hệ 4, đạt/không. Ô bắt đầu bằng `=`, `+`, `-`, `@` được thêm dấu `\'` đầu để Excel không hiểu là công thức. SV không được xuất. | Khảo sát 1.2 (GV cần xuất CSV) | Service | FORBIDDEN |
 
 ## 5. Khóa sổ, kết quả môn và bảng điểm (LCK, TRN)
 
@@ -226,3 +228,4 @@ Tạm tính = (8.0×20 + 8.5×30) / (20 + 30) = 415 / 50 = **8.30**, hiện kèm
 | Phiên bản | Ngày | Thay đổi | Người duyệt |
 |---|---|---|---|
 | 0.1 | 2026-11-09 | Bản đầu, tổng hợp từ các quyết định ở 00 §4 | (chờ duyệt) |
+| 0.2 | 2026-11-15 | Thêm BR-GRD-07 (xuất sổ điểm CSV) và mã lỗi CURRENT_PASSWORD_INCORRECT theo code đã xây | (chờ duyệt) |
