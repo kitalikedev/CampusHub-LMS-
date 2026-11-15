@@ -21,8 +21,9 @@
 | 06 | `06-ARCHITECTURE.md` | Cấu trúc module, luồng request, hợp đồng API, quyết định kiến trúc | Lead | Nháp |
 | 07 | `07-DIAGRAMS.md` | Danh sách sơ đồ as-is/to-be, quy ước vẽ, phân công, checklist | TV1, TV2 | Nháp |
 | 08 | `08-TEST-PLAN.md` | Test theo BR/AC, Definition of Done, ma trận truy vết, kịch bản demo | Lead | Nháp |
-| 09 | `09-ROADMAP.md` | Giai đoạn, mốc, tiến độ (PROGRESS), nợ kỹ thuật, rủi ro | Lead | Nháp |
+| 09 | `09-ROADMAP.md` | Giai đoạn, mốc, nợ kỹ thuật, rủi ro (tiến độ ở `docs/PROGRESS.md`) | Lead | Nháp |
 | 10 | `10-TASKS.md` | Đặc tả việc giao cho từng thành viên | Lead | Nháp |
+| — | `docs/PROGRESS.md` | Tiến độ hiện tại, việc đang làm, sơ đồ cần sửa, dàn ý báo cáo | Cả nhóm | Sống |
 | — | `/AGENTS.md` (+ `/CLAUDE.md`) | Luật làm việc chung cho người và AI | Lead | Nháp |
 
 Nếu thiếu thời gian, ưu tiên hoàn thiện theo thứ tự **03 → 02 → 05 → 06 → 07**. Các file 08–10 cập nhật dần trong quá trình làm.
