@@ -53,7 +53,7 @@
 |---|---|---|---|---|
 | SCR-I01 | Tổng quan | Lớp được giao; số bài nộp chờ chấm; phúc khảo chờ (S) | Mở lớp, mở hàng chờ chấm | FR-DSH-02 |
 | SCR-I02 | Lớp phụ trách | Danh sách lớp theo học kỳ, trạng thái lớp | Mở lớp | FR-ENR-06 |
-| SCR-I03 | Chi tiết lớp | Tab **Thông báo** · **Bài tập & trọng số** (tổng % hiện rõ, cảnh báo khi ≠ 100%) · **Sổ điểm** (SV × bài, tạm tính) · **Sinh viên** · **Khóa sổ** (checklist BR-LCK-01, nút Khóa sổ) | Tạo/sửa/xóa bài; đăng thông báo; khóa sổ | FR-ASG-01, 02, FR-GRD-03, FR-LCK-01, FR-ANN-01 |
+| SCR-I03 | Chi tiết lớp | Tab **Thông báo** · **Bài tập & trọng số** (tổng % hiện rõ, cảnh báo khi ≠ 100%) · **Sổ điểm** (SV × bài, tạm tính, nút **Xuất CSV**) · **Sinh viên** · **Khóa sổ** (checklist BR-LCK-01, nút Khóa sổ) | Tạo/sửa/xóa bài; đăng thông báo; khóa sổ | FR-ASG-01, 02, FR-GRD-03, FR-GRD-05, FR-LCK-01, FR-ANN-01 |
 | SCR-I04 | Chấm bài | Danh sách SV của lớp với bài nộp mới nhất, nhãn trễ, số lần nộp; ô điểm 0–10 và nhận xét; với bài MANUAL có nút "Công bố điểm" | Lưu điểm, công bố | FR-SUB-04, FR-GRD-01, 02 |
 | SCR-I05 | Phúc khảo (S) | Danh sách yêu cầu theo trạng thái; chi tiết: điểm cũ, lý do của SV | Chấp nhận (nhập điểm mới) / Từ chối (nhập lý do) | FR-REG-02 |
 | SCR-I06 | Lịch dạy | Lưới tuần như SCR-S06 | — | FR-TRN-02 |
@@ -97,23 +97,24 @@
 
 ## 5. Design token
 
-Khai báo trong `web/src/app/globals.css` (khối `@theme` của Tailwind v4). Giữ tông navy/crimson hiện tại và **bổ sung các màu đang dùng nhưng chưa định nghĩa** (sửa ISS-14).
+Khai báo trong `web/src/app/globals.css` (khối `@theme` của Tailwind v4). Hướng **"Học thuật cổ điển"** (đã áp dụng, DEC-F2): tham khảo nguyên tắc của Stanford Decanter, HarvardSites, U-M Library Design System, USWDS; màu lấy từ logo VNUK.
 
 | Nhóm | Token | Giá trị |
 |---|---|---|
-| Thương hiệu | `navy-900` / `navy-800` / `navy-700` | #0B2545 / #13315C / #134074 (giữ nguyên) |
-| | `navy-200` / `navy-100` / `navy-50` | #B9C8DE / #DCE4F0 / #EEF2F8 (thêm mới) |
-| | `crimson-700` / `crimson-600` | #8B0000 / #A31D1D (giữ nguyên) |
-| Nền | `surface` / `card` | #F8FAFC / #FFFFFF |
-| Ngữ nghĩa | `success` / `warning` / `danger` / `info` | #15803D / #B45309 / #A31D1D / #134074 |
-| Chữ | `text` / `text-muted` | #0B2545 / #475569 |
-| Viền | `border` | #E2E8F0 |
+| Xanh VNUK (màu chính) | `navy-900` / `navy-800` / `navy-700` | #1C3060 / #2A4278 / #34508E |
+| | `navy-200` / `navy-100` / `navy-50` | #B9C4DC / #DDE3EF / #F1F4F9 |
+| Đỏ VNUK (màu nhấn) | `crimson-700` / `crimson-600` / `crimson-50` | #6B0F28 / #881434 / #F9EDF0 |
+| Nền | `surface` / `card` | #F7F8FA / #FFFFFF |
+| Chữ | `ink` / `muted` | #1A2238 / #4B5568 |
+| Viền | `line` | #DFE3EA |
+| Ngữ nghĩa | `success` / `warning` / `danger` / `info` (kèm `-soft`) | #1E6B3A / #8A4B08 / #881434 / #1C3060 |
 
-- **Chữ:** font hệ thống (system-ui), không thêm font ngoài. Cỡ chữ 12 / 14 / 16 / 20 / 24 / 30 px; nội dung chính 14–16 px.
+- **Chữ:** tiêu đề dùng Source Serif 4, nội dung dùng Source Sans 3, tải qua `next/font/google` (bộ ký tự `vietnamese`); dự phòng font hệ thống. Cỡ chữ 12 / 14 / 16 / 20 / 24 / 30 px.
+- **Bố cục:** header trắng có vạch đỏ phía trên, thanh bên trắng với vạch đỏ ở mục đang chọn, đường dẫn (breadcrumb) và liên kết "Bỏ qua tới nội dung" ở đầu trang.
 - **Khoảng cách:** thang 4 px của Tailwind; khoảng cách giữa các khối 24 px, trong thẻ 16 px.
-- **Bo góc:** 6 px cho input/nút, 10 px cho thẻ và hộp thoại.
-- **Đổ bóng:** chỉ một mức nhẹ cho thẻ và hộp thoại; không dùng gradient.
-- **Chuyển động:** 150 ms ease-out cho hover và mở hộp thoại; tôn trọng `prefers-reduced-motion`; bỏ hiệu ứng trang trí (ví dụ chấm nhấp nháy `animate-pulse`).
+- **Bo góc:** 4 px cho input/nút (`--radius-control`), thẻ và hộp thoại bo nhỏ.
+- **Đổ bóng:** chỉ một mức nhẹ; không dùng gradient.
+- **Chuyển động:** 150 ms ease-out; tôn trọng `prefers-reduced-motion`.
 
 ## 6. Bộ component dùng chung (`web/src/components/ui`)
 
@@ -165,6 +166,6 @@ Khi khóa sổ: bài chưa có điểm được tính 0; sau khi khóa chỉ Adm
                                                  [Khóa sổ] (bị vô hiệu tới khi đủ điều kiện)
 ```
 
-## 10. Hướng thiết kế lại tối giản (để sau, DEC-F2)
+## 10. Hướng thiết kế lại tối giản (DEC-F2, đã làm ở bản 0.2)
 
 Khi nhóm quyết định thiết kế lại: chỉ đổi token (§5) và component (§6), giữ nguyên trang, hook dữ liệu và API. Định hướng: nền trắng, một màu nhấn, không gradient, không icon trang trí, tên chức năng hiện rõ, mật độ thông tin vừa phải.

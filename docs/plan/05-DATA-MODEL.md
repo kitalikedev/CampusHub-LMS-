@@ -199,10 +199,10 @@ Không có quyền cho khách (BR-GEN-03).
 
 Seed chạy bằng `python scripts/seed.py`, chạy lặp lại được (đã có thì bỏ qua). Mốc thời gian **tính tương đối theo ngày chạy seed**, để demo hôm nào cũng đúng.
 
-- **Tài khoản:** 1 Admin, 3 GV, 12 SV; email dạng `@campushub.edu.vn`. Mật khẩu demo dùng chung ghi trong README (G5). Các tài khoản demo không phải đổi mật khẩu, trừ một tài khoản `sv.moi@campushub.edu.vn` để demo luồng đăng nhập lần đầu.
+- **Tài khoản:** 1 Admin, 3 GV, 12 SV; email dạng `@campushub.edu.vn`. Mật khẩu demo dùng chung là `Demo@12345`, ghi trong README (G5). Các tài khoản demo không phải đổi mật khẩu, trừ một tài khoản `sv.moi@campushub.edu.vn` để demo luồng đăng nhập lần đầu.
 - **Bảng quy đổi:** 8 bậc theo DEC-E2.
-- **Học kỳ:** `2026-1` đã kết thúc (lớp đã khóa sổ, có kết quả, có môn F); `2026-2` đang học (đợt đăng ký đã đóng); `2027-1` sắp tới, **đợt đăng ký đang mở** (từ 7 ngày trước đến 14 ngày sau ngày chạy seed).
-- **Môn học:** CS101 Lập trình cơ bản (3) · CS201 OOP và CTDL (4, cần CS101) · CS301 Cơ sở dữ liệu (3, cần CS101) · CS302 Web Fullstack (3, cần CS201) · CS401 Thiết kế hệ thống (3, cần CS301 và CS302) · MA101 Toán rời rạc (3) · EN101 Tiếng Anh học thuật (2) · PE101 Giáo dục thể chất (1, Non-Graded).
+- **Học kỳ:** `2026-1` đã kết thúc (lớp đã khóa sổ, có kết quả, có môn F); `2026-2` đang học (đợt đăng ký đã đóng); `2027-1` sắp tới, **đợt đăng ký đang mở** (từ 7 ngày trước đến 14 ngày sau ngày chạy seed), giới hạn **6–9 tín chỉ** để dễ demo lỗi vượt tín chỉ (kỳ 2026-1 và 2026-2 giới hạn 6–24).
+- **Môn học (14):** CS101 Lập trình cơ bản (3) · CS201 OOP và CTDL (4, cần CS101) · CS210 Kiến trúc máy tính (3) · CS220 Mạng máy tính (4) · CS230 Phân tích thiết kế hệ thống (3) · CS301 Cơ sở dữ liệu (3, cần CS101) · CS302 Web Fullstack (3, cần CS201) · CS401 Thiết kế hệ thống (3, cần CS301 và CS302) · MA101 Toán rời rạc (3) · MA201 Xác suất thống kê (3, cần MA101) · EN101 Tiếng Anh học thuật (2) · EN102 Tiếng Anh chuyên ngành (2) · PE101 Giáo dục thể chất 1 (1, Non-Graded) · PE102 Bóng chuyền (1, Non-Graded).
 - **Phòng:** A102 (60), B201 (40), Lab301 (30), Lab402 (30), Lab501 (35).
 - **Lớp và kịch bản demo:**
 

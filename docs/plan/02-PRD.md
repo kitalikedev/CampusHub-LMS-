@@ -68,6 +68,7 @@ CampusHub là cổng học tập (LMS kết hợp học vụ) cho ba vai trò: P
 | FR-GRD-02 | Công bố điểm của bài ở chế độ ẩn | GV | M | BR-GRD-04 |
 | FR-GRD-03 | Sổ điểm của lớp: SV × bài, điểm tạm tính | GV | M | BR-GRD-05 |
 | FR-GRD-04 | Xem điểm, nhận xét từng bài và điểm tạm tính của môn | SV | M | BR-GRD-04, 05 |
+| FR-GRD-05 | Xuất sổ điểm lớp ra file CSV | GV, Admin | S | BR-GRD-07 |
 | FR-LCK-01 | Khóa sổ theo checklist điều kiện | GV | M | BR-LCK-01…05, 07 |
 | FR-LCK-02 | Mở lại sổ, bắt buộc ghi lý do | Admin | M | BR-LCK-06 |
 | FR-TRN-01 | Bảng điểm theo học kỳ: hệ 10, điểm chữ, hệ 4, GPA/TBC học kỳ và tích lũy, tín chỉ tích lũy | SV | M | BR-TRN-01…07 |
